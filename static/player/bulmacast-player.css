@@ -1,0 +1,271 @@
+body .bulmacast-mejs-container {
+    height: 40px;
+    margin-bottom: 1.65em;
+}
+
+body .bulmacast-mejs-container,
+body .bulmacast-mejs-container .mejs__controls {
+    height: 40px;
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+}
+
+
+body .bulmacast-mejs-container .mejs__time {
+    color: #4a4a4a;
+    font-size: 12px;
+    line-height: 9px;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail {
+    height: 10px;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total {
+    margin: 0;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-loaded {
+    display: none;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-buffering,
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-current,
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total {
+    border-radius: 3px;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total:focus {
+    outline: 1px dotted #999;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total:hover,
+.bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total:active {
+    outline: 0;
+}
+
+.bulmacast-mejs-container .mejs__controls .mejs__time-slider .mejs__time-hovered,
+.bulmacast-mejs-container .mejs__controls .mejs__time-slider .mejs__time-handle {
+    visibility: hidden;
+}
+
+body .bulmacast-mejs-container .mejs__currenttime-container,
+body .bulmacast-mejs-container .mejs__duration-container {
+    padding: 0 2px;
+    height: 40px;
+    line-height: 40px;
+}
+
+body .bulmacast-mejs-container .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total,
+body .bulmacast-mejs-container .mejs__controls .mejs__time-rail,
+body .bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-total,
+body .bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-loaded {
+    background-color: #dbdbdb;
+}
+
+body .bulmacast-mejs-container .mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current,
+body .bulmacast-mejs-container .mejs__time-current,
+body .bulmacast-mejs-container .mejs__controls .mejs__time-rail .mejs__time-current,
+body .bulmacast-mejs-container .mejs__time-hovered {
+    background-color: #4a4a4a;
+}
+
+body .bulmacast-mejs-container .mejs__time-float,
+body .bulmacast-mejs-container .mejs__time-handle-content {
+    border-color: #4a4a4a;
+    background-color: #4a4a4a;
+}
+
+.bulmacast-mejs-container .mejs__time-rail {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+body .bulmacast-mejs-container .mejs__time-float {
+    color: #fff;
+    margin-bottom: 6px;
+    width: 34px;
+    height: 16px;
+}
+
+body .bulmacast-mejs-container .mejs__time-float {
+    color: #fff;
+}
+
+body .bulmacast-mejs-container .mejs__time-float .mejs__time-float-current {
+    margin: 2px 0 0;
+    width: 100%;
+}
+
+body .bulmacast-mejs-container .mejs__time-float,
+body .bulmacast-mejs-container .mejs__time-float .mejs__time-float-corner {
+    border-top-color: #4a4a4a;
+}
+
+.bulmacast-mejs-container .mejs__volume-button,
+.bulmacast-mejs-container .mejs__captions-button,
+.bulmacast-mejs-container .mejs__download-button,
+.bulmacast-mejs-container .mejs__transcript-button {
+    margin-left: 3px;
+    width: 30px;
+}
+
+body .bulmacast-mejs-container .mejs__volume-button {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body .bulmacast-mejs-container .mejs__volume-button {
+        display: block;
+    }
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider,
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
+    background-color: rgba(32, 32, 32, .2);
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider {
+    background-color: transparent;
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider,
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider {
+    background-color: transparent;
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider {
+    left: 15px;
+    width: 20px;
+    height: 80px;
+    border-radius: 3px;
+}
+
+.bulmacast-mejs-container .mejs__volume-button > .mejs__volume-slider:hover {
+    opacity: 1;
+}
+
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
+    width: 10px;
+    height: 80px;
+    top: 0;
+    border-radius: 3px;
+}
+
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total .mejs__volume-current {
+    background-color: #4a4a4a;
+    border-radius: 3px;
+}
+
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total .mejs__volume-current {
+    background-color: #fff;
+}
+
+.bulmacast-mejs-container .mejs__volume-button .mejs__volume-slider .mejs__volume-total .mejs__volume-handle {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+.bulmacast-mejs-container .mejs__download-button,
+.bulmacast-mejs-container .mejs__captions-button,
+.bulmacast-mejs-container .mejs__transcript-button {
+    margin-left: 1px;
+}
+
+.bulmacast-mejs-container .mejs__download-button a,
+.bulmacast-mejs-container .mejs__transcript-button a {
+    background: transparent;
+    display: block;
+    text-align: center;
+}
+
+.bulmacast-mejs-container .mejs__download-button a,
+.bulmacast-mejs-container .mejs__download-button a:hover,
+.bulmacast-mejs-container .mejs__download-button a:focus,
+.bulmacast-mejs-container .mejs__transcript-button a,
+.bulmacast-mejs-container .mejs__transcript-button a:hover,
+.bulmacast-mejs-container .mejs__transcript-button a:focus {
+    text-decoration: none;
+}
+
+.bulmacast-mejs-container .mejs__button > button:hover,
+.bulmacast-mejs-container .mejs__button > button:focus {
+    opacity: 1;
+}
+
+body .bulmacast-mejs-container .mejs__playpause-button > button:before,
+.bulmacast-mejs-container .mejs__volume-button button:before,
+.bulmacast-mejs-container .mejs__captions-button button:before,
+.bulmacast-mejs-container .mejs__download-button a:before,
+.bulmacast-mejs-container .mejs__transcript-button a:before{
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bulmacast-mejs-container .mejs__volume-button button:before,
+.bulmacast-mejs-container .mejs__captions-button button:before,
+.bulmacast-mejs-container .mejs__download-button a:before,
+.bulmacast-mejs-container .mejs__transcript-button a:before {
+    color: #4a4a4a;
+}
+
+.bulmacast-mejs-container .mejs__volume-button button:before,
+.bulmacast-mejs-container .mejs__captions-button button:before,
+.bulmacast-mejs-container .mejs__download-button a:before,
+.bulmacast-mejs-container .mejs__transcript-button a:before {
+    color: #fff;
+}
+
+.bulmacast-mejs-container .mejs__download-button a:before,
+.bulmacast-mejs-container .mejs__transcript-button a:before {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.bulmacast-mejs-container .mejs__download-button a:before {
+    content: '\f220';
+    position: relative;
+    top: 1px;
+}
+
+.bulmacast-mejs-container .mejs__transcript-button a:before {
+    content: '\f16a';
+    content: '\f3d3';
+}
+
+
+@media (min-width: 480px) {
+    body .bulmacast-mejs-container .mejs__time {
+        font-size: 13px;
+        line-height: 41px;
+    }
+    body .bulmacast-mejs-container .mejs__duration-container {
+        margin-right: 2px;
+    }
+
+    .bulmacast-mejs-container .mejs__time-rail {
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+
+    .bulmacast-mejs-container .mejs__volume-button {
+        margin-left: 6px;
+    }
+
+    .bulmacast-mejs-container .mejs__download-button,
+    .bulmacast-mejs-container .mejs__transcript-button {
+        margin-left: 5px;
+    }
+}

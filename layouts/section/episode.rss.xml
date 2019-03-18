@@ -1,0 +1,54 @@
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="{{ "episode/index.xml" | absURL }}" rel="self" type="application/rss+xml" />
+
+    <title>{{ $.Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <language>{{ .Site.LanguageCode }}</language>
+    <copyright>{{ .Site.Params.Podcast.Copyright }}</copyright>
+
+    <itunes:subtitle>{{ .Site.Params.Podcast.Summary }}</itunes:subtitle>
+    <itunes:author>{{ .Site.Params.Podcast.Author }}</itunes:author>
+
+    <itunes:summary>{{ .Site.Params.Podcast.Description }}</itunes:summary>
+    <description>{{ .Site.Params.Podcast.Description }}</description>
+
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>{{ .Site.Params.Podcast.Owner.Name }}</itunes:name>
+      <itunes:email>{{ .Site.Params.Podcast.Owner.Email }}</itunes:email>
+    </itunes:owner>
+
+    <itunes:image href="{{ .Site.Params.Podcast.Artwork | absURL }}" />
+
+    <itunes:category text="{{ .Site.Params.Podcast.Category }}">
+      <itunes:category text="{{ .Site.Params.Podcast.Subcategory }}" />
+    </itunes:category>
+
+    <itunes:explicit>{{ .Site.Params.Podcast.Explicit }}</itunes:explicit>
+
+    {{ range (where .Site.Pages "Type" "episode") }}
+      {{ if isset .Params "file" }}
+        <item>
+          <link>{{ .Permalink }}</link>
+          <title>{{ .Params.title }}</title>
+          <pubDate>{{ dateFormat "Mon, 02 Jan 2006 10:00:00 +0300" .Params.publication | safeHTML }} </pubDate>
+
+          {{ `<description><![CDATA[` | safeHTML }}{{ .Content }}]]></description>
+
+          <guid isPermaLink="true">{{ .Params.file }}</guid>
+          <enclosure url="{{ .Params.file }}" {{with .Params.bytes}}length="{{ . }}"{{ end }} type="audio/mpeg" />
+
+          {{ with .Params.episode }}<itunes:episode>{{ . }}</itunes:episode>{{ end }}
+          {{ with .Params.duration }}<itunes:duration>{{ . }}</itunes:duration>{{ end }}
+          <itunes:image href="{{ with .Params.cover }}{{ . | absURL }}{{ else }}{{ .Site.Params.Podcast.Artwork | absURL }}{{ end }}"/>
+          
+          <itunes:author>{{ .Site.Params.Podcast.Author }}</itunes:author>
+          <itunes:explicit>{{ .Params.Explicit }}</itunes:explicit>
+
+          <itunes:summary>{{ .Params.Summary }}</itunes:summary>
+        </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>

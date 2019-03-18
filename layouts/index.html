@@ -1,0 +1,40 @@
+{{ define "extra" }}
+    <script src="/player/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="/player/mediaelementplayer.min.css" />
+    <link rel="stylesheet" href="/player/bulmacast-player.css" />
+{{ end }}
+{{ define "main" }}
+<section class="hero is-medium  is-bold">
+    <div class="hero-body">
+        <div class="container">
+            {{ $episodes := (where .Data.Pages "Type" "episode") }}
+            {{ range last 1 $episodes }}
+                <h1 class="title is-size-4-mobile">{{ .Site.Title }}: {{ .Params.Title }}</h1>
+                <div class="player" style="margin-left:-.5rem;">
+                    <audio class="mejs__player bulmacast-mejs-container" src="{{ .Params.file }}" preload="auto" width="100%" />
+                </div>
+                <div class="content">{{ .Params.Summary }}</div>
+                <div class="level">
+                    <div class="level-left">
+                        <div class="field is-grouped is-grouped-multiline">
+                            <div class="control"><a class="tag is-link" href="{{ .Params.Digest }}" target="_blank">MODX-Дайджест #{{ .Params.episode }}</a></div>
+                            <div class="control"><a class="tag is-primary" href="{{ .Params.file }}">Скачать эпизод</a></div>
+                            {{ $size := int .Params.bytes }}
+                            <div class="control"><div class="tag">{{ printf "%.f" (div $size 1000000.0 ) }} MB</div></div>
+                            <div class="control"><div class="tag">{{ .Params.duration }}</div></div>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="buttons">
+                            <a href="/episode/index.xml" class="button is-warning is-small" style="background-color:#f26522;color:#fff;"><span class="icon"><i class="fas fa-rss"></i></span><span>RSS</span></a>
+                            <a href="https://soundcloud.com/modcastby" class="button is-warning is-small" style="background-color:#f50;color:#fff;"><span class="icon"><i class="fab fa-soundcloud"></i></span><span>SoundCloud</span></a>
+                            <a href="https://www.youtube.com/playlist?list=PLVbo0tgRKXrSGg6dxJYTIHko5t7AOnG3E" class="button is-danger is-small" style="background-color:#f00;"><span class="icon"><i class="fab fa-youtube"></i></span><span> YouTube</span></a>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+
+        </div>
+    </div>
+</section>
+{{ end }}

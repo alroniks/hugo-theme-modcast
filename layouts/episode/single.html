@@ -1,0 +1,43 @@
+{{ define "extra" }}
+    <script src="/player/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="/player/mediaelementplayer.min.css" />
+    <link rel="stylesheet" href="/player/bulmacast-player.css" />
+{{ end }}
+{{ define "main" }}
+<section class="section" style="margin-bottom:8rem">
+    <div class="container">
+        <h1 class="title is-1">{{ .Site.Title }}: {{ title .Title }}</h1>
+        <div class="columns">
+            <small class="column is-two-thirds subtitle"><strong>{{ .Params.humanDate }}</strong>: {{ .Params.Summary }}</small>
+        </div>
+
+        <div class="field is-grouped is-grouped-multiline">
+            <div class="control"><a class="tag is-link" href="{{ .Params.Digest }}" target="_blank">MODX-Дайджест #{{ .Params.episode }}</a></div>
+            <div class="control"><a class="tag is-primary" href="{{ .Params.file }}">Скачать эпизод</a></div>
+            {{ $size := int .Params.bytes }}
+            <div class="control"><div class="tag">{{ printf "%.f" (div $size 1000000.0 ) }} MB</div></div>
+            <div class="control"><div class="tag">{{ .Params.duration }}</div></div>
+        </div>
+
+        <div class="player">
+            <br>
+            <audio class="mejs__player bulmacast-mejs-container" src="{{ .Params.file }}" preload="auto" width="100%" />
+        </div>
+
+        <br>
+        
+        <div class="content">
+            {{ .Content }}
+        </div>
+
+        <nav class="pagination" role="navigation" aria-label="pagination">
+            {{ if .PrevInSection }}
+                <a class="pagination-previous" href="{{ .PrevInSection.Permalink }}">Предыдущий выпуск</a>
+            {{ end }}
+            {{ if .NextInSection }}
+                <a class="pagination-next" href="{{ .NextInSection.Permalink }}">Следующий выпуск</a>
+            {{ end }}
+        </nav>
+    </div>
+</section>
+{{ end }}

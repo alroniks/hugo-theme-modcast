@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+  {{ block "extra" . }} {{ end }}
+</head>
+
+<body style="margin-bottom:14rem;">
+  {{ partial "header.html" . }}
+  {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+  {{ end }}
+  {{ partial "footer.html" . }}
+</body>

@@ -1,0 +1,42 @@
+{{ define "extra" }}
+    <script src="/player/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="/player/mediaelementplayer.min.css" />
+    <link rel="stylesheet" href="/player/bulmacast-player.css" />
+{{ end }}
+{{ define "main" }}
+    {{ $episodes := (where .Data.Pages "Type" "episode") }}
+    <section class="section">
+        <div class="container">
+            {{ range $episodes }}
+            <article class="media">
+                <figure class="media-left is-hidden-mobile">
+                    <p class="image is-128x128">
+                        {{ if .Params.cover }}
+                            <img src="{{ .Params.cover }}">
+                        {{ else }}
+                            <img src="/img/artwork.jpg">
+                        {{ end }}
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <a href="{{ .Permalink }}"><h3 class="title" style="margin-bottom:.4rem;">{{ .Site.Title }}: {{ .Title }}</h3></a>
+                        <div class="field is-grouped is-grouped-multiline">
+                            {{ $size := int .Params.bytes }}
+                            <div class="control"><span class="tag">{{ .Params.humanDate }}</span></div>
+                            <div class="control"><div class="tag">{{ printf "%.f" (div $size 1000000.0 ) }} MB</div></div>
+                            <div class="control"><div class="tag">{{ .Params.duration }}</div></div>
+                        </div>
+                        <small>{{ .Params.summary }}</small>
+                        {{ with .Params.file }}
+                            <div class="player" style="margin-left:-.5rem;">
+                                <audio class="mejs__player bulmacast-mejs-container" src="{{ . }}" preload="auto" width="100%" />
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+{{ end }}
