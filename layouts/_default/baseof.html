@@ -5,10 +5,12 @@
   {{ block "extra" . }} {{ end }}
 </head>
 
-<body style="margin-bottom:14rem;">
+<body style="display:flex;min-height:100vh;flex-direction:column;">
   {{ partial "header.html" . }}
+  <div style="flex: 1;">
   {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
   {{ end }}
+  </div>
   {{ partial "footer.html" . }}
 </body>
