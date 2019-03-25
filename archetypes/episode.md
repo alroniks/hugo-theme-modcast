@@ -20,11 +20,11 @@ explicit = "no" # values are "yes" or "no" or "clean"
 - 00:00:00 {chapter}
 - 00:00:00 {chapter}
 
-[MODX-Дайджест]({{< param digest >}})
+[MODX-Дайджест #{{< param episode >}}]({{< param digest >}})
 
 [Телеграм-канал дайджеста](https://t.me/modxdigest)
 
-**Слушайте**: [iTunes](https://itunes.apple.com/by/podcast/%D0%BC%D0%BE%D0%B4%D0%BA%D0%B0%D1%81%D1%82/id1456459618), [YouTube](https://www.youtube.com/watch?v=fI_Yie3-9Jk&list=PLVbo0tgRKXrSGg6dxJYTIHko5t7AOnG3E), [Яндекс](https://music.yandex.ru/album/7133163), [SoundCloud](https://soundcloud.com/modcastby), Overcast, [RSS](https://modcast.by/episode/index.xml)
+**Слушайте**: [iTunes](https://itunes.apple.com/by/podcast/%D0%BC%D0%BE%D0%B4%D0%BA%D0%B0%D1%81%D1%82/id1456459618), [Overcast](https://overcast.fm/itunes1456459618), [RSS](https://modcast.by/episode/index.xml), [YouTube](https://www.youtube.com/watch?v=fI_Yie3-9Jk&list=PLVbo0tgRKXrSGg6dxJYTIHko5t7AOnG3E), [Яндекс](https://music.yandex.ru/album/7133163), [SoundCloud](https://soundcloud.com/modcastby) 
 
 Задавайте вопросы и предлагайте темы: [Твиттер](https://twitter.com/iklimchuk), [Телеграм](https://t.me/alroniks)
 

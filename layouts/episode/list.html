@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/player/bulmacast-player.css" />
 {{ end }}
 {{ define "main" }}
-    {{ $episodes := (where .Data.Pages "Type" "episode") }}
+    {{ $episodes := (where .Data.Pages "Type" "episode").Reverse }}
     <section class="section">
         <div class="container">
             {{ range $episodes }}
