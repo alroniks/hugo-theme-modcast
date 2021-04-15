@@ -11,7 +11,7 @@
             {{ range last 1 $episodes }}
                 <h1 class="title is-size-4-mobile">{{ .Site.Title }}: {{ .Params.Title }}</h1>
                 <div class="player" style="margin-left:-.5rem;">
-                    <audio class="mejs__player bulmacast-mejs-container" src="{{ .Params.file }}" preload="auto" width="100%" />
+                    <audio class="mejs__player bulmacast-mejs-container" src="{{ .Params.file }}" preload="auto" width="100%">
                 </div>
                 <div class="content">{{ .Params.Summary }}</div>
                 <div class="level">

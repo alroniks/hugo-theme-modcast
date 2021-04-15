@@ -30,7 +30,7 @@
                         <small>{{ .Params.summary }}</small>
                         {{ with .Params.file }}
                             <div class="player" style="margin-left:-.5rem;">
-                                <audio class="mejs__player bulmacast-mejs-container" src="{{ . }}" preload="auto" width="100%" />
+                                <audio class="mejs__player bulmacast-mejs-container" src="{{ . }}" preload="auto" width="100%">
                             </div>
                         {{ end }}
                     </div>
