@@ -1,17 +1,9 @@
-name = "bulmacast"
-description = "A podcast-oriented theme for Hugo based on Bulma CSS framework"
-
-homepage = "https://github.com/Alroniks/bulmacast"
-
+name = "modcast"
 license = "MIT"
-licenselink = "https://github.com/Alroniks/bulmacast/blob/master/LICENSE.md"
-
-# todo: need to learn examples add proper
-tags = ["podcast", "responsive"]
-# todo: need to learn examples add proper
+licenselink = "https://github.com/alroniks/hugo-theme-modcast/blob/master/LICENSE"
+description = "A podcast-oriented theme for Hugo based on Bulma CSS framework"
+tags = ["podcast", "responsive", "minimal", "bulma"]
 features = ["Podcast RSS"]
-
-theme_version = "0.1.0"
 
 [author]
   name = "Ivan Klimchuk"
