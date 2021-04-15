@@ -1,0 +1,17 @@
+name: Theme Update Automation
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  notify-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send notification to the remote repository
+        run: |
+          curl -XPOST -u "${{ secrets.USERNAME }}:${{ secrets.ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.everest-preview+json" \
+          -H "Content-Type: application/json" \
+          https://api.github.com/repos/alroniks/modcastby/dispatches --data '{"event_type": "update_theme"}'
