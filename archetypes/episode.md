@@ -2,6 +2,8 @@
 draft = true
 
 episode = ""
+season = "" # number of season
+type = "" # may be: full, trailer
 title = ""
 summary = ""
 humanDate = "" # human date of publication
